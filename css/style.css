@@ -443,6 +443,12 @@ header ul i{
   .iconMobile div{
     margin-left: 30px;
   }
+  .projects{
+    flex-direction: column;
+  }
+  #latestProjects article{
+    width: 100%;
+  }
   #sidebar{
     overflow-x: hidden;
     padding-top: 60px;
