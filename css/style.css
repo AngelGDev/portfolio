@@ -25,18 +25,30 @@ html{
   font-family: 'Ubuntu', sans-serif;
 }
 body {
-  font-size: 2rem;
+  font-size: 1.7rem;
   background-color: #e8e8e8;
 	display: flex;
 }
 input{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'Ubuntu', sans-serif;
 }
 span, a{
   display: block;
   text-decoration: none;
   color: black;
+}
+h1{
+  font-size: 5.3rem;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 2.1rem;
+}
+strong{
+  font-weight: bold;
 }
 input[type="button"]{
   width: 150px;
@@ -63,12 +75,20 @@ i{
   display: none;
   visibility: hidden;
 }
+#home, #aboutMe, #services, #latestProjects{
+  padding: 50px 0;
+  border-bottom: 2px solid #5a1e6e;
+  transition: ease-in 1s;
+}
+.flexContainer{
+  display: flex;
+}
 /******************************************
 /* WRAPPER
 /*******************************************/
 .wrapper > section{
   flex: 1;
-  padding: 40px;
+  padding: 40px 4% 40px 0.5%;
   margin-left: 320px;
 }
 /******************************************
@@ -88,45 +108,104 @@ header ul{
   display: flex;
   justify-content: space-between;
 }
+header ul i{
+  font-size: 2rem;
+}
 
 /******************************************
 /* HOME
 /*******************************************/
-.home{
+#home{
   display: flex;
-  padding: 50px 0;
-  border-bottom: 2px solid black;
 }
-.home > section{
+#home > section{
   text-align: center;
   flex: 1;
   padding: 0 40px;
 }
-h1{
+#home h1{
   text-align: left;
-  font-size: 5.3rem;
   font-weight: bold;
   line-height: 75px;
 }
-.home p{
+#home p{
   text-align: left;
   font-size: 2.5rem;
   color: rgba(0, 0, 0, 0.445);
   margin-top: 35px;
 }
-.home > section input{
+#home > section input{
   margin-top: 24%;
 }
-.home img{
-  width: 430px;
+#home img{
+  width: 270px;
+}
+
+/******************************************
+/* ABOUT ME
+/*******************************************/
+#aboutMe h2{
+  margin-bottom: 40px;
+}
+#aboutMe p{
+  margin: 10px 0;
+}
+/******************************************
+/* SERVICES
+/*******************************************/
+#services .flexContainer{
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#services h3{
+  color: #5a1e6e;
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#services p{
+  margin: 10px 0;
+}
+.services{
+  margin-top: 40px;
+}
+.services section{
+  display: flex;
+  width: 350px;
+}
+.services section i{
+  font-size: 9rem;
+  margin-right: 10px;
+}
+/******************************************
+/* LATEST PROJECTS
+/*******************************************/
+#latestProjects article{
+  width: 45%;
+  margin-bottom: 40px;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+#latestProjects img{
+  width: 100%;
+}
+#latestProjects h3{
+  color: #5a1e6e;
+  margin: 30px 0;
 }
 /******************************************
 /* SIDEBAR
 /*******************************************/
 #sidebar{
-  width: 320px;
+  width: 240px;
   min-height: 100vh;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   background: #5a1e6e;
   z-index: 1;
 }
@@ -134,11 +213,11 @@ h1{
   display: none;
 }
 #sidebar img{
-  width: 270px;
+  width: 200px;
   border-radius: 10px;
   margin: 30px 0 0 25px;
 }
-#nav, .search, #copyright{
+#nav, .search, .contact, #copyright{
   padding: 30px;
 }
 .search form{
@@ -185,20 +264,15 @@ h1{
   transition: background-color .25s ease-in-out, color .25s ease-in-out;
   color: white;
 }
-
-#nav li.current a {
-  background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-  font-weight: 700;
-  color: #fff;
-}
-
 #nav li:hover a {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+#copyright{
+  align-self: flex-end;
+}
 @media screen and (min-width: 1100px) and (max-width: 1400px){
-  .home section{
+  #home section{
     padding: 20px 0;
   }
   h1{
@@ -207,14 +281,14 @@ h1{
     text-align: center;
     padding: 0;
   }
-  .home p{
+  #home p{
     font-size: 2.7rem;
     text-align: center;
   }
-  .home > section input{
+  #home > section input{
     margin-top: 20%;
   }
-  .home img{
+  #home img{
     width: 70%;
   }
 }
@@ -228,7 +302,7 @@ h1{
   .fa-bars:hover{
     background-color: rgba(145, 8, 8, 0.7);
   }
-  .home section{
+  #home section{
     padding: 20px 0;
   }
   h1{
@@ -237,14 +311,14 @@ h1{
     text-align: center;
     padding: 0;
   }
-  .home p{
+  #home p{
     font-size: 2.7rem;
     text-align: center;
   }
-  .home > section input{
+  #home > section input{
     margin-top: 20%;
   }
-  .home img{
+  #home img{
     width: 70%;
   }
   #sidebar{
@@ -264,6 +338,7 @@ h1{
     margin-left: 50px;
     display: block;
   }
+  
 }
 @media screen and (min-width: 737px) and (max-width: 900px){
   .wrapper > section{
@@ -275,7 +350,7 @@ h1{
   .fa-bars:hover{
     background-color: rgba(145, 8, 8, 0.7);
   }
-  .home section{
+  #home section{
     padding: 20px 0;
   }
   h1{
@@ -284,14 +359,14 @@ h1{
     text-align: center;
     padding: 0;
   }
-  .home p{
+  #home p{
     font-size: 2.7rem;
     text-align: center;
   }
-  .home > section input{
+  #home > section input{
     margin-top: 20%;
   }
-  .home img{
+  #home img{
     width: 80%;
   }
   #sidebar{
@@ -311,8 +386,12 @@ h1{
     margin-left: 50px;
     display: block;
   }
+  
 }
 @media screen and (max-width: 736px) {
+  body{
+    padding: 10px;
+  }
   .wrapper{
     width: 100%;
     flex-direction: column;
@@ -332,28 +411,37 @@ h1{
   .fa-bars:hover{
     background-color: rgba(145, 8, 8, 0.7);
   }
-  .home{
+  #home{
     padding: 0;
     flex-direction: column;
   }
-  .home section{
+  #home section{
     padding: 20px 0;
   }
   h1{
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     line-height: normal;
     text-align: center;
     padding: 0;
   }
-  .home p{
+  #home p{
     font-size: 2rem;
     text-align: center;
   }
-  .home > section input{
+  #home > section input{
     margin-top: 5%;
   }
-  .home img{
+  #home img{
     width: 70%;
+  }
+  .services section{
+    margin-top: 30px;
+  }
+  .iconMobile{
+    margin-left: 30px;
+  }
+  .iconMobile div{
+    margin-left: 30px;
   }
   #sidebar{
     overflow-x: hidden;

@@ -1,7 +1,7 @@
 document.querySelector('.fa-bars').addEventListener('click', openSideBar)
 document.querySelector('.closebtn').addEventListener('click', closeSideBar)
 function openSideBar(){
-    document.getElementById("sidebar").style.width = "320px"
+    document.getElementById("sidebar").style.width = "250px"
 }
 
 function closeSideBar(){
