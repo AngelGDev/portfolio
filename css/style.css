@@ -430,6 +430,9 @@ header ul i{
     text-align: center;
     padding: 0;
   }
+  #home h1{
+    line-height: 30px;
+  }
   #home p{
     font-size: 2rem;
     text-align: center;
