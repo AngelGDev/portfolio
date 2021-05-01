@@ -7,3 +7,5 @@ function openSideBar(){
 function closeSideBar(){
     document.getElementById("sidebar").style.width = "0"
 }
+
+// reference notes
