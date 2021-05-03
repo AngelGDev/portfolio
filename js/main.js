@@ -8,4 +8,4 @@ function closeSideBar(){
     document.getElementById("sidebar").style.width = "0"
 }
 
-// reference notes will add scott alan project
+// reference notes will add scott alan project, email form
